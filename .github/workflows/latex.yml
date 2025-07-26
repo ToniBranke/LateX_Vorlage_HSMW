@@ -18,7 +18,7 @@ jobs:
     - name: Set up TeX Live
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: LateX_Vorlage_HSMW/slides__Copy_/main.tex  # <-- Change to your main tex file name
+        root_file: slides__Copy_/main.tex  # <-- Change to your main tex file name
 
     - name: Upload PDF as artifact
       uses: actions/upload-artifact@v4
