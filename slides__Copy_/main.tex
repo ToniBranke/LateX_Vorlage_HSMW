@@ -1,0 +1,143 @@
+\documentclass[
+	aspectratio=169,    % Modern aspect ratio
+	onlytextwidth,        % Sets totalwidth=\textwidth to prevent columns from invading margins
+	t,                    % Default vertical alignment of frames and columns at top
+%\thandout,            % Uncomment for handout version
+]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load the desired presentation theme
+\usetheme[cb,language=english,sectionslide,colormath=nottext]{hsmw} 
+
+\title[Inner Product Spaces]{Inner Product Spaces}
+\subtitle{Concepts, Theorems, and Examples}
+\author[Roma Talekar]{Roma Talekar}
+\email{rtalekar@hs-mittweida.de}
+\phone{} 
+\office{} 
+\titlegraphic{} 
+\usepackage{blindtext}
+\usepackage{amsmath, amssymb, physics, tikz, graphicx, booktabs, braket, svg, makecell, xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Title Slide
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% Outline Slide
+\begin{frame}[plain]
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+% Section: Vector Spaces Recap
+\section{Vector Spaces Recap}
+\begin{frame}{Recap: What is a Vector Space?}
+    \begin{itemize}
+        \item \textbf{Definition:} A set $V$ equipped with two operations: addition and scalar multiplication
+        \item \textbf{Key Properties:}
+        \begin{itemize}
+            \item Commutativity, Associativity, Zero vector existence
+            \item Additive inverses, Distributivity
+        \end{itemize}
+        \item \textbf{Examples:} $\mathbb{R}$, $\mathbb{R}^n$, $C(\Omega)$
+    \end{itemize}
+\end{frame}
+
+% Section: Inner Product Definition
+\section{Inner Product Definition}
+\begin{frame}{Inner Product: Definition and Properties}
+    \begin{itemize}
+        \item \textbf{Definition:} A function $(\cdot,\cdot)$ on $V$ satisfying:
+        \begin{enumerate}
+            \item Positivity: $(v,v) \geq 0$, $(v,v) = 0$ iff $v = 0$
+            \item Conjugate symmetry: $(u,v) = \overline{(v,u)}$
+            \item Linearity: $(\alpha u + \beta v, w) = \alpha (u,w) + \beta (v,w)$
+        \end{enumerate}
+        \item \textbf{Example:} Euclidean Inner Product: $(x,y) = x_1y_1 + \dots + x_ny_n$
+    \end{itemize}
+\end{frame}
+
+% Section: Additional Inner Product Spaces
+\section{Additional Inner Product Spaces}
+\begin{frame}{Examples of Inner Product Spaces}
+    \begin{itemize}
+        \item Square-integrable functions
+        \item Square-summable sequences
+        \item Sobolev Spaces (important in PDE theory and numerical analysis)
+    \end{itemize}
+\end{frame}
+
+% Section: Key Theorems
+\section{Key Theorems}
+\begin{frame}{Important Results}
+    \begin{itemize}
+        \item \textbf{Schwarz Inequality:} $|(u,v)| \leq \sqrt{(u,u)(v,v)}$
+        \item \textbf{Continuity of Inner Product:} Inner product is continuous with respect to its induced norm
+    \end{itemize}
+\end{frame}
+
+% Section: Hilbert Spaces
+\section{Hilbert Spaces}
+\begin{frame}{Hilbert Spaces}
+    \begin{itemize}
+        \item \textbf{Definition:} Complete inner product space
+        \item \textbf{Examples:} $\mathbb{R}^n$, $L^2(\Omega)$, $\ell^2$
+    \end{itemize}
+\end{frame}
+
+% Section: Applications of Hilbert Spaces
+\section{Applications of Hilbert Spaces}
+\begin{frame}{Applications of Hilbert Spaces}
+    \begin{itemize}
+        \item Quantum Mechanics: State spaces represented by Hilbert spaces
+        \item Signal Processing: Fourier series and transforms
+        \item Machine Learning: Kernel methods, PCA
+    \end{itemize}
+\end{frame}
+
+% Section: Gram-Schmidt Orthogonalization
+\section{Gram-Schmidt Orthogonalization}
+\begin{frame}{Gram-Schmidt Orthogonalization}
+    \begin{itemize}
+        \item Converts independent vectors into an orthogonal set
+        \item Uses projection to remove components along existing vectors
+    \end{itemize}
+\end{frame}
+
+% Section: Orthogonality
+\section{Orthogonality}
+\begin{frame}{Orthogonality: Definition and Properties}
+    \begin{itemize}
+        \item Vectors $u, v$ are orthogonal if $(u,v) = 0$
+        \item \textbf{Pythagorean Identity:} $\|u+v\|^2 = \|u\|^2 + \|v\|^2$ if $u \perp v$
+    \end{itemize}
+\end{frame}
+
+% Section: Fourier Series Example
+\section{Fourier Series Example}
+\begin{frame}{Fourier Series Convergence}
+    \begin{itemize}
+        \item Expansion of $2\pi$-periodic, square-integrable functions
+        \item Converges in $L^2(-\pi,\pi)$
+    \end{itemize}
+\end{frame}
+
+% Section: Summary
+\section{Summary}
+\begin{frame}{Summary and Key Takeaways}
+    \begin{itemize}
+        \item Inner products generalize dot product notions
+        \item Hilbert spaces are crucial in analysis and physics
+        \item Fourier series have significant applications
+    \end{itemize}
+\end{frame}
+
+% Thank You Slide
+\appendix
+\makethankyou
+
+\end{document}
