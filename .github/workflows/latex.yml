@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: compiled-pdf
-        path: latex_presentation_hsmw.pdf  # <-- Change to your output PDF name
+        path: slides__Copy_/main.pdf # <-- Change to your output PDF name
