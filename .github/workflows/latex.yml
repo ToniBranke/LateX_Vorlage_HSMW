@@ -18,10 +18,11 @@ jobs:
     - name: Set up TeX Live
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: slides__Copy_/main.tex  # <-- Change to your main tex file name
+        root_file: main.tex
+        working_directory: slides__Copy_
 
     - name: Upload PDF as artifact
       uses: actions/upload-artifact@v4
       with:
         name: compiled-pdf
-        path: slides__Copy_/main.pdf # <-- Change to your output PDF name
+        path: slides__Copy_/main.pdf
